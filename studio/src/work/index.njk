@@ -1,0 +1,46 @@
+---
+layout: layouts/page.njk
+pageTitle: "Работы"
+metaDescription: "Портфолио дизайн-студии: брендинг, веб-дизайн, UI/UX и разработка сайтов под ключ."
+permalink: /work/
+---
+
+{# Page hero #}
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-hero__title reveal">Наши работы</h1>
+    <p class="page-hero__desc reveal" style="--delay: 80ms">Каждый проект — это история о задаче клиента и нашем решении. Смотрите кейсы и выбирайте, что ближе вашему бизнесу.</p>
+  </div>
+</section>
+
+{# Filter #}
+<section class="section--sm">
+  <div class="container">
+    <div class="filter reveal">
+      <button class="filter__btn filter__btn--active" data-filter="all">Все</button>
+      <button class="filter__btn" data-filter="Брендинг">Брендинг</button>
+      <button class="filter__btn" data-filter="Веб">Веб</button>
+      <button class="filter__btn" data-filter="UI/UX">UI/UX</button>
+    </div>
+
+    {# Cases grid #}
+    <div class="grid grid--3">
+      {% for caseItem in cases %}
+      <a href="/work/{{ caseItem.slug }}/" class="case-card reveal" data-category="{{ caseItem.category }}" style="--delay: {{ loop.index0 * 80 }}ms">
+        <div class="case-card__image-wrap">
+          <div class="case-card__image" style="background-color: {{ caseItem.color }}">{{ caseItem.title }}</div>
+        </div>
+        <div class="case-card__meta">
+          <span class="tag">{{ caseItem.category }}</span>
+          <span class="text-sm text-tertiary">{{ caseItem.year }}</span>
+        </div>
+        <div class="case-card__title">{{ caseItem.title }}</div>
+        <p class="case-card__desc">{{ caseItem.brief }}</p>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# CTA #}
+{% include "partials/cta-block.njk" %}

@@ -1,0 +1,17 @@
+# Dependencies
+studio/node_modules/
+
+# 11ty output
+studio/_site/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+*.swp
+*.swo
+
+# Claude Code
+.claude/

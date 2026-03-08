@@ -1,0 +1,25 @@
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div>
+        <div class="footer__brand">{{ site.name }}</div>
+        <p class="footer__tagline">{{ site.tagline }}</p>
+      </div>
+      <div>
+        <div class="footer__heading">Навигация</div>
+        <a href="/work/" class="footer__link">Работы</a>
+        <a href="/services/" class="footer__link">Услуги</a>
+        <a href="/about/" class="footer__link">О нас</a>
+        <a href="/contact/" class="footer__link">Контакты</a>
+      </div>
+      <div>
+        <div class="footer__heading">Контакты</div>
+        <a href="{{ site.telegram }}" class="footer__link" target="_blank" rel="noopener">Telegram {{ site.telegramHandle }}</a>
+        <a href="mailto:{{ site.email }}" class="footer__link">{{ site.email }}</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      &copy; {{ "" | year }} {{ site.name }}. Все права защищены.
+    </div>
+  </div>
+</footer>

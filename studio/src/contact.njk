@@ -1,0 +1,19 @@
+---
+layout: layouts/page.njk
+pageTitle: "Контакты"
+metaDescription: "Свяжитесь с нами через Telegram или email. Ответим в течение нескольких часов."
+permalink: /contact/
+---
+
+<section class="contact-hero">
+  <div class="container container--narrow">
+    <h1 class="contact-hero__title reveal">Давайте работать вместе</h1>
+    <p class="contact-hero__desc reveal" style="--delay: 80ms">Напишите нам в Telegram — обычно отвечаем в течение пары часов в рабочее время. Расскажите о задаче, и мы предложим решение.</p>
+    <div class="reveal" style="--delay: 160ms">
+      <a href="{{ site.telegram }}" class="btn btn--primary btn--lg btn--full" target="_blank" rel="noopener">Написать в Telegram</a>
+    </div>
+    <div class="mt-8 reveal" style="--delay: 200ms">
+      <a href="mailto:{{ site.email }}" class="contact-hero__email">{{ site.email }}</a>
+    </div>
+  </div>
+</section>

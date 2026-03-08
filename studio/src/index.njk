@@ -1,0 +1,100 @@
+---
+layout: layouts/page.njk
+pageTitle: ""
+metaDescription: "Дизайн-студия полного цикла: брендинг, веб-дизайн, разработка и деплой с CMS. Для малого бизнеса и стартапов."
+---
+
+{# Hero #}
+<section class="hero">
+  <div class="container">
+    <h1 class="hero__title">Дизайн и разработка для тех, кто хочет выделиться</h1>
+    <p class="hero__subtitle">Полный цикл: от идеи и дизайна до вёрстки, деплоя и подключения CMS. Вы получаете готовый продукт, а не макет в Figma.</p>
+    <a href="{{ site.telegram }}" class="btn btn--primary btn--lg" target="_blank" rel="noopener">Написать в Telegram</a>
+  </div>
+  <div class="hero__scroll scroll-indicator">
+    <span class="text-sm">Скролл</span>
+    <span class="hero__scroll-arrow">↓</span>
+  </div>
+</section>
+
+{# Services strip #}
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-header__title">Что мы делаем</h2>
+    </div>
+    <div class="grid grid--4">
+      <div class="service-card reveal" style="--delay: 0ms">
+        <div class="service-card__icon">✦</div>
+        <div class="service-card__name">Брендинг</div>
+        <p class="service-card__desc">Логотип, фирменный стиль и гайдлайн для печати и digital.</p>
+      </div>
+      <div class="service-card reveal" style="--delay: 80ms">
+        <div class="service-card__icon">◈</div>
+        <div class="service-card__name">Веб-дизайн</div>
+        <p class="service-card__desc">Дизайн сайтов и интерфейсов, которые решают задачи бизнеса.</p>
+      </div>
+      <div class="service-card reveal" style="--delay: 160ms">
+        <div class="service-card__icon">⬡</div>
+        <div class="service-card__name">Разработка под ключ</div>
+        <p class="service-card__desc">Вёрстка, деплой и Textolite CMS — вы сами управляете контентом.</p>
+      </div>
+      <div class="service-card reveal" style="--delay: 240ms">
+        <div class="service-card__icon">◉</div>
+        <div class="service-card__name">UI/UX</div>
+        <p class="service-card__desc">Исследование, прототипы и интерфейсы, удобные для ваших пользователей.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Selected work #}
+<section class="section" style="background-color: var(--color-bg-subtle)">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-header__title">Избранные проекты</h2>
+    </div>
+    <div class="grid grid--2">
+      {% for caseItem in cases | head(3) %}
+      <a href="/work/{{ caseItem.slug }}/" class="case-card reveal" style="--delay: {{ loop.index0 * 100 }}ms">
+        <div class="case-card__image-wrap">
+          <div class="case-card__image" style="background-color: {{ caseItem.color }}">{{ caseItem.title }}</div>
+        </div>
+        <div class="case-card__meta">
+          <span class="tag">{{ caseItem.category }}</span>
+          <span class="text-sm text-tertiary">{{ caseItem.year }}</span>
+        </div>
+        <div class="case-card__title">{{ caseItem.title }}</div>
+      </a>
+      {% endfor %}
+    </div>
+    <div class="mt-12 reveal">
+      <a href="/work/" class="link-arrow">Все проекты →</a>
+    </div>
+  </div>
+</section>
+
+{# About strip #}
+<section class="section">
+  <div class="container">
+    <div class="about-strip">
+      <div class="reveal">
+        <h2 class="section-header__title">Два человека — полный цикл</h2>
+        <p class="about-strip__text mt-4">Мы — дизайнер и разработчик. Работаем вместе, поэтому между макетом и готовым сайтом нет потерь. Дизайн сразу учитывает технические ограничения, а разработка точно следует замыслу. Все проекты сдаём с Textolite CMS — клиент обновляет контент самостоятельно, без нашего участия.</p>
+      </div>
+      <div class="about-strip__stats reveal" style="--delay: 100ms">
+        <div class="stat">
+          <div class="stat__value">2</div>
+          <div class="stat__label">Специалиста в команде</div>
+        </div>
+        <div class="stat">
+          <div class="stat__value">∞</div>
+          <div class="stat__label">Полный цикл</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CTA #}
+{% include "partials/cta-block.njk" %}

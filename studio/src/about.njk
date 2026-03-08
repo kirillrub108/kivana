@@ -1,0 +1,91 @@
+---
+layout: layouts/page.njk
+pageTitle: "О нас"
+metaDescription: "Дизайнер и разработчик, которые делают проекты от идеи до запуска. Полный цикл, фиксированные сроки, Textolite CMS."
+permalink: /about/
+---
+
+{# Page hero #}
+<section class="page-hero">
+  <div class="container">
+    <h1 class="page-hero__title reveal">О нас</h1>
+    <p class="page-hero__desc reveal" style="--delay: 80ms">Мы — компактная студия из двух человек. Дизайнер и разработчик, которые делают проекты от первого звонка до деплоя.</p>
+  </div>
+</section>
+
+{# Team #}
+<section class="section--sm">
+  <div class="container">
+    <div class="grid grid--2">
+      {% for member in site.team %}
+      <div class="team-card reveal" style="--delay: {{ loop.index0 * 100 }}ms">
+        <div class="team-card__avatar">{{ member.name | first }}</div>
+        <div class="team-card__name">{{ member.name }}</div>
+        <div class="team-card__role">{{ member.role }}</div>
+        <p class="team-card__bio">{{ member.bio }}</p>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Why us #}
+<section class="section" style="background-color: var(--color-bg-subtle)">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-header__title">Почему мы</h2>
+    </div>
+    <div class="grid grid--4">
+      <div class="advantage reveal" style="--delay: 0ms">
+        <div class="advantage__title">Полный цикл</div>
+        <p class="advantage__desc">Дизайн и разработка в одной команде. Нет потерь между макетом и кодом.</p>
+      </div>
+      <div class="advantage reveal" style="--delay: 80ms">
+        <div class="advantage__title">Textolite CMS</div>
+        <p class="advantage__desc">Клиент обновляет контент сам, без привлечения разработчика. Независимость с первого дня.</p>
+      </div>
+      <div class="advantage reveal" style="--delay: 160ms">
+        <div class="advantage__title">Фиксированные сроки</div>
+        <p class="advantage__desc">Называем дату — сдаём в дату. Работаем по спринтам с еженедельными отчётами.</p>
+      </div>
+      <div class="advantage reveal" style="--delay: 240ms">
+        <div class="advantage__title">Прозрачные цены</div>
+        <p class="advantage__desc">Фиксированная стоимость проекта. Никаких скрытых доплат и размытых смет.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Process #}
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-header__title">Процесс работы</h2>
+    </div>
+    <div class="process reveal" style="--delay: 100ms">
+      <div class="process__step">
+        <div class="process__number">01</div>
+        <div class="process__name">Бриф</div>
+      </div>
+      <div class="process__step">
+        <div class="process__number">02</div>
+        <div class="process__name">Дизайн</div>
+      </div>
+      <div class="process__step">
+        <div class="process__number">03</div>
+        <div class="process__name">Утверждение</div>
+      </div>
+      <div class="process__step">
+        <div class="process__number">04</div>
+        <div class="process__name">Разработка</div>
+      </div>
+      <div class="process__step">
+        <div class="process__number">05</div>
+        <div class="process__name">Деплой</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# CTA #}
+{% include "partials/cta-block.njk" %}

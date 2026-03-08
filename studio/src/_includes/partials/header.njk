@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="container header__inner">
+    <a href="/" class="header__logo">{{ site.name }}</a>
+
+    <nav class="header__nav">
+      <a href="/work/" class="header__link{% if page.url == '/work/' %} header__link--active{% endif %}">Работы</a>
+      <a href="/services/" class="header__link{% if page.url == '/services/' %} header__link--active{% endif %}">Услуги</a>
+      <a href="/about/" class="header__link{% if page.url == '/about/' %} header__link--active{% endif %}">О нас</a>
+      <a href="/contact/" class="header__link{% if page.url == '/contact/' %} header__link--active{% endif %}">Контакты</a>
+    </nav>
+
+    <button class="header__burger" aria-label="Открыть меню">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Мобильная навигация -->
+<nav class="mobile-nav">
+  <a href="/work/" class="mobile-nav__link">Работы</a>
+  <a href="/services/" class="mobile-nav__link">Услуги</a>
+  <a href="/about/" class="mobile-nav__link">О нас</a>
+  <a href="/contact/" class="mobile-nav__link">Контакты</a>
+</nav>

@@ -1,0 +1,105 @@
+---
+layout: layouts/case.njk
+pagination:
+  data: cases
+  size: 1
+  alias: caseItem
+permalink: /work/{{ caseItem.slug }}/
+eleventyComputed:
+  pageTitle: "{{ caseItem.title }}"
+  metaDescription: "{{ caseItem.challenge }}"
+---
+
+{% set allCases = cases %}
+{% set currentIndex = 0 %}
+{% for c in allCases %}
+  {% if c.slug == caseItem.slug %}
+    {% set currentIndex = loop.index0 %}
+  {% endif %}
+{% endfor %}
+
+<section class="section--sm">
+  <div class="container">
+    <a href="/work/" class="back-link">← Все проекты</a>
+
+    {# Case hero #}
+    <div class="case-hero reveal">
+      <h1 class="case-hero__title">{{ caseItem.title }}</h1>
+      <div class="case-hero__meta">
+        <span>{{ caseItem.client }}</span>
+        <span>·</span>
+        <span>{{ caseItem.year }}</span>
+        <span>·</span>
+        {% for tag in caseItem.tags %}
+          <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      <p class="case-hero__challenge">{{ caseItem.challenge }}</p>
+    </div>
+  </div>
+</section>
+
+{# Overview: Challenge + Solution #}
+<section class="section--sm">
+  <div class="container">
+    <div class="grid grid--2 reveal">
+      <div>
+        <h2 class="text-2xl mb-4">Задача</h2>
+        <p class="text-secondary" style="line-height: var(--leading-normal)">{{ caseItem.challenge }}</p>
+      </div>
+      <div>
+        <h2 class="text-2xl mb-4">Решение</h2>
+        <p class="text-secondary" style="line-height: var(--leading-normal)">{{ caseItem.solution }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Image gallery #}
+<section class="section--sm">
+  <div class="container">
+    <div class="reveal">
+      <div class="gallery__item mb-8" style="background-color: {{ caseItem.color }}; aspect-ratio: 16/9;">Изображение проекта</div>
+    </div>
+    <div class="grid grid--2 reveal" style="--delay: 100ms">
+      <div class="gallery__item" style="background-color: {{ caseItem.color }}; opacity: 0.8;">Детали</div>
+      <div class="gallery__item" style="background-color: {{ caseItem.color }}; opacity: 0.6;">Детали</div>
+    </div>
+  </div>
+</section>
+
+{# Results / Metrics #}
+<section class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <h2 class="section-header__title">Результаты</h2>
+    </div>
+    <div class="grid grid--3 reveal" style="--delay: 80ms">
+      {% for m in caseItem.metrics %}
+      <div class="metric">
+        <div class="metric__value">{{ m.value }}</div>
+        <div class="metric__label">{{ m.label }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Next case #}
+{% set nextIndex = currentIndex + 1 %}
+{% if nextIndex >= allCases.length %}
+  {% set nextIndex = 0 %}
+{% endif %}
+{% set nextCase = allCases[nextIndex] %}
+
+<section class="section--sm">
+  <div class="container">
+    <a href="/work/{{ nextCase.slug }}/" class="next-case reveal">
+      <div class="next-case__label">Следующий проект</div>
+      <div class="next-case__title">{{ nextCase.title }}</div>
+    </a>
+  </div>
+</section>
+
+{# CTA #}
+{% include "partials/cta-block.njk" %}

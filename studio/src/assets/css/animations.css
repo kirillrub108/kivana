@@ -1,0 +1,57 @@
+/**
+ * Animations
+ * Scroll-reveal анимации, переходы и hover-эффекты.
+ * Все анимации отключаются при prefers-reduced-motion.
+ */
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 500ms ease, transform 500ms ease;
+  transition-delay: var(--delay, 0ms);
+}
+
+.reveal--visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Scroll indicator */
+.scroll-indicator {
+  animation: scroll-bounce 2s ease-in-out infinite;
+}
+
+@keyframes scroll-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+/* Header scroll state */
+.header--scrolled {
+  box-shadow: var(--shadow-sm);
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .scroll-indicator {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms;
+    transition-duration: 0.01ms;
+  }
+}
