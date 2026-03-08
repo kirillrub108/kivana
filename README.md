@@ -5,7 +5,6 @@
 ## Структура проекта
 
 ```
-studio/
 ├── src/
 │   ├── _includes/
 │   │   ├── layouts/          # Шаблоны страниц (base, page, case)
@@ -22,14 +21,13 @@ studio/
 │   ├── services.njk          # Услуги
 │   ├── about.njk             # О нас
 │   └── contact.njk           # Контакты
-├── .eleventy.js              # Конфигурация 11ty
+├── eleventy.config.cjs       # Конфигурация 11ty
 └── package.json
 ```
 
 ## Запуск локально
 
 ```bash
-cd studio
 npm install
 npm run dev
 ```

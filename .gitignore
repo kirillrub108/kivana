@@ -1,8 +1,8 @@
 # Dependencies
-studio/node_modules/
+node_modules/
 
 # 11ty output
-studio/_site/
+_site/
 
 # OS files
 .DS_Store
