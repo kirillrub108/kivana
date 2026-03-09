@@ -224,7 +224,7 @@
 
 .hero__scroll {
   position: absolute;
-  bottom: var(--space-8);
+  bottom: var(--space-16);
   left: 50%;
   transform: translateX(-50%);
   font-size: var(--text-sm);
