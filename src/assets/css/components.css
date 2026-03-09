@@ -256,6 +256,11 @@
   font-style: italic;
 }
 
+.service-item__cta {
+  display: inline-flex;
+  margin-top: var(--space-6);
+}
+
 /* --- Stat block --- */
 .stat {
   padding: var(--space-6);
