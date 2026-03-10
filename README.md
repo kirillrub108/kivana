@@ -1,4 +1,4 @@
-# Design Studio
+# Kivana
 
 Сайт дизайн-студии на 11ty (Eleventy) + vanilla CSS + vanilla JS.
 
