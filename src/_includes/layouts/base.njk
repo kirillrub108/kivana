@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <!-- Yandex Webmaster -->
-  <meta name="yandex-verification" content="1d22179c064b27da" />
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>{% if customTitle %}{{ customTitle }}{% else %}{{ pageTitle }}{% if pageTitle %} — {% endif %}{{ site.name }}{% endif %}</title>
   <meta name="description" content="{{ metaDescription or site.description }}">
+  
+  <!-- Yandex Webmaster -->
+  <meta name="yandex-verification" content="1d22179c064b27da" />
 
   <!-- Open Graph -->
   <meta property="og:title" content="{{ pageTitle }}{% if pageTitle %} — {% endif %}{{ site.name }}">
