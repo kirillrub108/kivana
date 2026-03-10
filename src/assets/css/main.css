@@ -366,6 +366,7 @@
 .oferta h2 {
   margin-top: var(--space-16);
   padding-top: var(--space-8);
+  margin-bottom: var(--space-4);
   border-top: 1px solid var(--color-border, #e5e5e5);
 }
 
