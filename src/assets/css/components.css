@@ -46,6 +46,11 @@
   color: #fff;
 }
 
+.cta .btn--inverted:hover {
+  background-color: #fff;
+  color: #000;
+}
+
 .btn--lg {
   padding: var(--space-4) var(--space-12);
   font-size: var(--text-lg);
