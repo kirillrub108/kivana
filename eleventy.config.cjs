@@ -1,6 +1,7 @@
 module.exports = function(eleventyConfig) {
   // Копируем статику без обработки
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy({ "src/assets/images/favicon/favicon.ico": "favicon.ico" });
 
   // Фильтр текущего года
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
