@@ -375,7 +375,7 @@
 .process__number {
   font-size: var(--text-sm);
   font-weight: 600;
-  color: var(--color-text-tertiary);
+  color: #22C55E;
   margin-bottom: var(--space-2);
 }
 
