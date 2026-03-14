@@ -4,6 +4,30 @@
  * Ни одно значение не должно использоваться в CSS напрямую — только через эти токены.
  */
 
+@font-face {
+  font-family: 'FixelText';
+  src: url('/assets/fonts/FixelText-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FixelText';
+  src: url('/assets/fonts/FixelText-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'FixelText';
+  src: url('/assets/fonts/FixelText-SemiBold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   /* Colors */
   --color-bg: #ffffff;
@@ -17,8 +41,8 @@
   --color-accent-hover: #2a2a28;
 
   /* Typography */
-  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-display: 'Inter', system-ui, sans-serif;
+  --font-sans: 'FixelText', system-ui, -apple-system, sans-serif;
+  --font-display: 'FixelText', system-ui, sans-serif;
 
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;

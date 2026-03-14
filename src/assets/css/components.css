@@ -37,12 +37,13 @@
 }
 
 .btn--inverted {
-  background-color: var(--color-bg);
-  color: var(--color-accent);
+  background-color: #22C55E;
+  color: #000;
 }
 
 .btn--inverted:hover {
-  background-color: var(--color-surface);
+  background-color: #000;
+  color: #fff;
 }
 
 .btn--lg {
@@ -148,8 +149,14 @@
 }
 
 .service-card__icon {
-  font-size: var(--text-3xl);
+  font-size: 36px;
+  color: #22C55E;
   margin-bottom: var(--space-4);
+  transition: color var(--transition-fast);
+}
+
+.service-card:hover .service-card__icon {
+  color: var(--color-text-primary);
 }
 
 .service-card__name {
@@ -264,7 +271,7 @@
 /* --- Stat block --- */
 .stat {
   padding: var(--space-6);
-  background-color: var(--color-bg-subtle);
+  background-color: #22C55E;
   border-radius: var(--radius-md);
 }
 
@@ -273,11 +280,12 @@
   font-weight: 600;
   line-height: var(--leading-tight);
   margin-bottom: var(--space-2);
+  color: #000;
 }
 
 .stat__label {
   font-size: var(--text-sm);
-  color: var(--color-text-secondary);
+  color: rgba(0, 0, 0, 0.7);
 }
 
 /* --- Team card --- */
