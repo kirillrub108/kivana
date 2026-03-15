@@ -28,7 +28,11 @@ permalink: /work/
       {% for caseItem in cases %}
       <a href="/work/{{ caseItem.slug }}/" class="case-card reveal" data-category="{{ caseItem.category }}" style="--delay: {{ loop.index0 * 80 }}ms">
         <div class="case-card__image-wrap">
+          {% if caseItem.cover %}
+          <img class="case-card__image case-card__image--photo" src="{{ caseItem.cover }}" alt="{{ caseItem.title }}">
+          {% else %}
           <div class="case-card__image" style="background-color: {{ caseItem.color }}">{{ caseItem.title }}</div>
+          {% endif %}
         </div>
         <div class="case-card__meta">
           <span class="tag">{{ caseItem.category }}</span>

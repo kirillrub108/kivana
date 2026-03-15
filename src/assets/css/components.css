@@ -119,6 +119,14 @@
   transition: transform var(--transition-base);
 }
 
+.case-card__image--photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-base);
+}
+
 .case-card__meta {
   display: flex;
   align-items: center;
@@ -497,6 +505,36 @@
 .filter__btn--active {
   background-color: var(--color-accent);
   color: var(--color-bg);
+}
+
+/* --- Case gallery (real photos) --- */
+.case-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-4);
+}
+
+.case-gallery__img {
+  width: 100%;
+  border-radius: var(--radius-md);
+  object-fit: cover;
+  aspect-ratio: 4 / 3;
+  display: block;
+}
+
+.case-gallery__img--hero {
+  grid-column: 1 / -1;
+  aspect-ratio: 16 / 9;
+}
+
+@media (max-width: 640px) {
+  .case-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .case-gallery__img--hero {
+    grid-column: 1;
+  }
 }
 
 /* --- Gallery placeholder --- */

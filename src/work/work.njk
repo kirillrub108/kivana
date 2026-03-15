@@ -58,13 +58,26 @@ eleventyComputed:
 {# Image gallery #}
 <section class="section--sm">
   <div class="container">
-    <div class="reveal">
-      <div class="gallery__item mb-8" style="background-color: {{ caseItem.color }}; aspect-ratio: 16/9;">Изображение проекта</div>
-    </div>
-    <div class="grid grid--2 reveal" style="--delay: 100ms">
-      <div class="gallery__item" style="background-color: {{ caseItem.color }}; opacity: 0.8;">Детали</div>
-      <div class="gallery__item" style="background-color: {{ caseItem.color }}; opacity: 0.6;">Детали</div>
-    </div>
+    {% if caseItem.images and caseItem.images.length %}
+      <div class="case-gallery reveal">
+        {% for img in caseItem.images %}
+        <img
+          class="case-gallery__img{% if loop.first %} case-gallery__img--hero{% endif %}"
+          src="{{ img }}"
+          alt="{{ caseItem.title }} — {{ loop.index }}"
+          loading="{% if loop.first %}eager{% else %}lazy{% endif %}"
+        >
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="reveal">
+        <div class="gallery__item mb-8" style="background-color: {{ caseItem.color }}; aspect-ratio: 16/9;">Изображение проекта</div>
+      </div>
+      <div class="grid grid--2 reveal" style="--delay: 100ms">
+        <div class="gallery__item" style="background-color: {{ caseItem.color }}; opacity: 0.8;">Детали</div>
+        <div class="gallery__item" style="background-color: {{ caseItem.color }}; opacity: 0.6;">Детали</div>
+      </div>
+    {% endif %}
   </div>
 </section>
 
