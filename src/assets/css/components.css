@@ -37,7 +37,7 @@
 }
 
 .btn--inverted {
-  background-color: #22C55E;
+  background-color: var(--color-kivana-accent);
   color: #000;
 }
 
@@ -155,7 +155,7 @@
 
 .service-card__icon {
   font-size: 36px;
-  color: #22C55E;
+  color: var(--color-kivana-accent);
   margin-bottom: var(--space-4);
   transition: color var(--transition-fast);
 }
@@ -196,7 +196,7 @@
 .service-item__number {
   font-size: var(--text-4xl);
   font-weight: 600;
-  color: #22C55E;
+  color: var(--color-kivana-accent);
   transition: color var(--transition-base);
   min-width: 3ch;
 }
@@ -276,7 +276,7 @@
 /* --- Stat block --- */
 .stat {
   padding: var(--space-6);
-  background-color: #22C55E;
+  background-color: var(--color-kivana-accent);
   border-radius: var(--radius-md);
 }
 
@@ -375,7 +375,7 @@
 .process__number {
   font-size: var(--text-sm);
   font-weight: 600;
-  color: #22C55E;
+  color: var(--color-kivana-accent);
   margin-bottom: var(--space-2);
 }
 

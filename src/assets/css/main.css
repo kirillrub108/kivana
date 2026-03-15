@@ -271,12 +271,12 @@
 }
 
 .btn--hero {
-  background-color: #22C55E;
+  background-color: var(--color-kivana-accent);
   color: #fff;
 }
 
 .btn--hero:hover {
-  background-color: #1ea34e;
+  background-color: var(--color-kivana-accent-hover);
 }
 
 .hero__scroll {
@@ -414,7 +414,7 @@
 }
 
 .oferta-note a {
-  color: #22C55E;
+  color: var(--color-kivana-accent);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
