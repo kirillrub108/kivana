@@ -313,14 +313,14 @@
   width: 120px;
   height: 120px;
   border-radius: var(--radius-full);
-  background-color: var(--color-surface);
+  background-color: var(--color-kivana-accent);
   margin-inline: auto;
   margin-bottom: var(--space-6);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: var(--text-3xl);
-  color: var(--color-text-tertiary);
+  color: var(--color-bg);
 }
 
 .team-card__name {
