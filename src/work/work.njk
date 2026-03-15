@@ -114,14 +114,14 @@ eleventyComputed:
 
 {# Sticky prev/next navigation #}
 <div class="case-nav">
-  <a href="/work/{{ prevCase.slug }}/" class="case-nav__btn case-nav__btn--prev">
+  <a href="/work/{{ prevCase.slug }}/" class="case-nav__btn case-nav__btn--prev btn--inverted">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
     <span class="case-nav__info">
       <span class="case-nav__label">Предыдущий</span>
       <span class="case-nav__title">{{ prevCase.title }}</span>
     </span>
   </a>
-  <a href="/work/{{ nextCase.slug }}/" class="case-nav__btn case-nav__btn--next">
+  <a href="/work/{{ nextCase.slug }}/" class="case-nav__btn case-nav__btn--next btn--inverted">
     <span class="case-nav__info">
       <span class="case-nav__label">Следующий</span>
       <span class="case-nav__title">{{ nextCase.title }}</span>

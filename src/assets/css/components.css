@@ -38,7 +38,7 @@
 
 .btn--inverted {
   background-color: var(--color-kivana-accent);
-  color: var(--color-kivana-accent-hover);
+  color: var(--color-bg);
 }
 
 .btn--inverted:hover {
@@ -506,7 +506,7 @@
 
 .filter__btn:hover,
 .filter__btn--active {
-  background-color: var(--color-accent);
+  background-color: var(--color-kivana-accent);
   color: var(--color-bg);
 }
 
@@ -593,9 +593,7 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-3);
-  padding: var(--space-4) var(--space-6);
-  background-color: var(--color-accent);
-  color: var(--color-bg);
+  padding: var(--space-4) var(--space-4);
   border-radius: var(--radius-full);
   pointer-events: all;
   transition: background-color var(--transition-fast), transform var(--transition-fast);
@@ -603,9 +601,12 @@
   white-space: nowrap;
 }
 
-.case-nav__btn:hover {
-  background-color: var(--color-accent-hover);
-  transform: translateY(-2px);
+.case-nav__btn--prev {
+  padding-right: var(--space-8);
+}
+
+.case-nav__btn--next {
+    padding-left: var(--space-8);
 }
 
 .case-nav__btn svg {
