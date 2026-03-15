@@ -42,12 +42,19 @@
 .header__nav {
   display: none;
   gap: var(--space-8);
+  align-items: center;
 }
 
 @media (min-width: 768px) {
   .header__nav {
     display: flex;
   }
+}
+
+.header__tg {
+  padding: var(--space-2) var(--space-4);
+  font-size: var(--text-sm);
+  margin-left: var(--space-2);
 }
 
 .header__link {

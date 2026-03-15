@@ -5,6 +5,7 @@
 
 import { initNav } from './nav.js';
 import { initAnimations } from './animations.js';
+import { initLightbox } from './lightbox.js';
 
 // Фильтрация кейсов на странице портфолио
 const initFilter = () => {
@@ -35,4 +36,5 @@ document.addEventListener('DOMContentLoaded', () => {
   initNav();
   initAnimations();
   initFilter();
+  initLightbox();
 });
