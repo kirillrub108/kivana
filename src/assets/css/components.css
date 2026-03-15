@@ -38,17 +38,17 @@
 
 .btn--inverted {
   background-color: var(--color-kivana-accent);
-  color: #000;
+  color: var(--color-kivana-accent-hover);
 }
 
 .btn--inverted:hover {
-  background-color: #000;
+  background-color: var(--color-kivana-accent-hover);
   color: #fff;
 }
 
 .cta .btn--inverted:hover {
   background-color: #fff;
-  color: #000;
+  color: var(--color-kivana-accent-hover);
 }
 
 .btn--lg {
