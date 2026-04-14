@@ -25,7 +25,7 @@ permalink: /work/
 
     {# Cases grid #}
     <div class="grid grid--3">
-      {% for caseItem in cases %}
+      {% for caseItem in cases | reverse %}
       <a href="/work/{{ caseItem.slug }}/" class="case-card reveal" data-category="{{ caseItem.category }}" style="--delay: {{ loop.index0 * 80 }}ms">
         <div class="case-card__image-wrap{% if caseItem.cover %} case-card__image-wrap--photo{% endif %}">
           {% if caseItem.cover %}

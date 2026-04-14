@@ -85,7 +85,7 @@ metaDescription: "Kivana — дизайн-студия полного цикла
       <h2 class="section-header__title">Наши проекты</h2>
     </div>
     <div class="grid grid--2">
-      {% for caseItem in cases | head(4) %}
+      {% for caseItem in cases | reverse | head(4) %}
         <a
           href="/work/{{ caseItem.slug }}/"
           class="case-card reveal"
