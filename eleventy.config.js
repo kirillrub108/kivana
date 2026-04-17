@@ -4,6 +4,8 @@ export default function(eleventyConfig) {
   eleventyConfig.addPlugin(HtmlBasePlugin);
 
   eleventyConfig.addPassthroughCopy("src/assets");
+  eleventyConfig.addPassthroughCopy({ "src/assets/images/favicon/favicon.ico": "favicon.ico" });
+  
   eleventyConfig.addFilter("year", () => new Date().getFullYear());
   
   // Возвращаем фильтр head, который используется в index.njk
