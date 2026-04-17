@@ -1,4 +1,9 @@
-module.exports = function(eleventyConfig) {
+const { HtmlBasePlugin } = require("@11ty/eleventy");
+
+module.exports = function (eleventyConfig) {
+  // Подключаем плагин для автоматической обработки абсолютных ссылок
+  eleventyConfig.addPlugin(HtmlBasePlugin);
+
   // Копируем статику без обработки
   eleventyConfig.addPassthroughCopy("src/assets");
   eleventyConfig.addPassthroughCopy({ "src/assets/images/favicon/favicon.ico": "favicon.ico" });
@@ -13,6 +18,7 @@ module.exports = function(eleventyConfig) {
   });
 
   return {
+    pathPrefix: process.env.PATH_PREFIX || "/", // По умолчанию корень (для dev и custom домена)
     dir: {
       input: "src",
       output: "_site",

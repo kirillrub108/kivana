@@ -4,8 +4,9 @@
   "description": "Сайт дизайн-студии — 11ty + vanilla CSS + vanilla JS",
   "scripts": {
     "dev": "eleventy --config=eleventy.config.cjs --serve --watch",
-    "build": "eleventy --config=eleventy.config.cjs",
-    "clean": "rm -rf _site"
+    "build": "eleventy --config=eleventy.config.cjs --pathprefix=/kivana/",
+    "build:custom": "eleventy --config=eleventy.config.cjs --pathprefix=/",
+    "clean": "node -e \"const fs=require('fs'); fs.rmSync('_site', {recursive:true, force:true})\""
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0"
