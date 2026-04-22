@@ -3,13 +3,17 @@ layout: layouts/page.njk
 pageTitle: "Работы"
 metaDescription: "Портфолио дизайн-студии: брендинг, веб-дизайн, UI/UX и разработка сайтов под ключ."
 permalink: /work/
+
 ---
 
 {# Page hero #}
 <section class="page-hero">
   <div class="container">
     <h1 class="page-hero__title reveal">Наши работы</h1>
-    <p class="page-hero__desc reveal" style="--delay: 80ms">Каждый проект — это история о задаче клиента и нашем решении. Смотрите кейсы и выбирайте, что ближе вашему бизнесу.</p>
+    <p class="page-hero__desc reveal" style="--delay: 80ms">
+      Каждый проект — это история о задаче клиента и нашем решении. Смотрите
+      кейсы и выбирайте, что ближе вашему бизнесу.
+    </p>
   </div>
 </section>
 
@@ -17,30 +21,48 @@ permalink: /work/
 <section class="section--sm">
   <div class="container">
     <div class="filter reveal">
-      <button class="filter__btn filter__btn--active" data-filter="all">Все</button>
+      <button class="filter__btn filter__btn--active" data-filter="all">
+        Все
+      </button>
       <button class="filter__btn" data-filter="Брендинг">Брендинг</button>
       <button class="filter__btn" data-filter="Лендинг">Лендинг</button>
-      <button class="filter__btn" data-filter="Корп. Сайт">Корп. Сайт</button>
+      <button class="filter__btn" data-filter="Корп. Сайт">
+        Корп. Сайт
+      </button>
     </div>
 
     {# Cases grid #}
     <div class="grid grid--3">
       {% for caseItem in cases | reverse %}
-      <a href="/work/{{ caseItem.slug }}/" class="case-card reveal" data-category="{{ caseItem.category }}" style="--delay: {{ loop.index0 * 80 }}ms">
-        <div class="case-card__image-wrap{% if caseItem.cover %} case-card__image-wrap--photo{% endif %}">
-          {% if caseItem.cover %}
-          <img class="case-card__image case-card__image--photo" src="{{ caseItem.cover }}" alt="{{ caseItem.title }}">
-          {% else %}
-          <div class="case-card__image" style="background-color: {{ caseItem.color }}">{{ caseItem.title }}</div>
-          {% endif %}
-        </div>
-        <div class="case-card__meta">
-          <span class="tag">{{ caseItem.category }}</span>
-          <span class="text-sm text-tertiary">{{ caseItem.year }}</span>
-        </div>
-        <div class="case-card__title">{{ caseItem.title }}</div>
-        <p class="case-card__desc">{{ caseItem.brief }}</p>
-      </a>
+        <a
+          href="/work/{{ caseItem.slug }}/"
+          class="case-card reveal"
+          data-category="{{ caseItem.category }}"
+          style="--delay: {{ loop.index0 * 80 }}ms"
+        >
+          <div class="case-card__image-wrap{% if caseItem.cover %} case-card__image-wrap--photo{% endif %}">
+            {% if caseItem.cover %}
+              <img
+                class="case-card__image case-card__image--photo"
+                src="{{ caseItem.cover }}"
+                alt="{{ caseItem.title }}"
+              >
+            {% else %}
+              <div
+                class="case-card__image"
+                style="background-color: {{ caseItem.color }}"
+              >
+                {{ caseItem.title }}
+              </div>
+            {% endif %}
+          </div>
+          <div class="case-card__meta">
+            <span class="tag">{{ caseItem.category }}</span>
+            <span class="text-sm text-tertiary">{{ caseItem.year }}</span>
+          </div>
+          <div class="case-card__title">{{ caseItem.title }}</div>
+          <p class="case-card__desc">{{ caseItem.brief }}</p>
+        </a>
       {% endfor %}
     </div>
   </div>

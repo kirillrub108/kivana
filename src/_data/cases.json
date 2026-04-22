@@ -78,6 +78,126 @@
     ]
   },
   {
+    "slug": "velocity",
+    "title": "Velocity",
+    "client": "Velocity",
+    "category": "Лендинг",
+    "year": "2026",
+    "color": "#5B5FED",
+    "brief": "Лендинг для SaaS-платформы управления инженерными командами",
+    "challenge": "Спроектировать лендинг для B2B SaaS-продукта, нацеленного на CTO и тимлидов. Аудитория скептична к маркетингу — нужно быстро донести ценность через интерфейс, а не слова. Главная задача: конвертировать в бесплатный триал.",
+    "solution": "Разработали структуру вокруг продуктового демо: живые скриншоты дашборда в hero-секции, блок фич с интерактивным превью и прозрачный тарифный раздел без скрытых условий. Чистый фиолетово-белый стиль создаёт ощущение зрелого продукта.",
+    "tags": [
+      "Веб-дизайн",
+      "Разработка",
+      "SaaS"
+    ],
+    "cover": "/assets/projects/landings/it/1.png",
+    "images": [
+      "/assets/projects/landings/it/1.png",
+      "/assets/projects/landings/it/2.png",
+      "/assets/projects/landings/it/3.png",
+      "/assets/projects/landings/it/4.png",
+      "/assets/projects/landings/it/5.png",
+      "/assets/projects/landings/it/6.png",
+      "/assets/projects/landings/it/7.png"
+    ],
+    "metrics": [
+      {
+        "label": "Страниц",
+        "value": "1"
+      },
+      {
+        "label": "Дней разработки",
+        "value": "12"
+      },
+      {
+        "label": "Блоков на сайте",
+        "value": "14"
+      }
+    ]
+  },
+  {
+    "slug": "roast",
+    "title": "Roast & Co",
+    "client": "Roast & Co",
+    "category": "Лендинг",
+    "year": "2026",
+    "color": "#2C2416",
+    "brief": "Сайт для specialty coffee-бара с онлайн-заказом",
+    "challenge": "Создать сайт для московского specialty-кофебара, который конкурирует с федеральными сетями. Нужно передать атмосферу и философию заведения, при этом обеспечить онлайн-заказ и программу лояльности с личным кабинетом.",
+    "solution": "Разработали мультистраничный сайт в тёплой кремово-чёрной гамме. Авторская типографика и лаконичные иллюстрации создают уютный характер бренда. Меню с фильтрами, программа лояльности с тремя уровнями и форма онлайн-заказа — всё выстроено вокруг повторных визитов.",
+    "tags": [
+      "Веб-дизайн",
+      "Разработка",
+      "E-commerce"
+    ],
+    "cover": "/assets/projects/landings/kafe/1.png",
+    "images": [
+      "/assets/projects/landings/kafe/1.png",
+      "/assets/projects/landings/kafe/2.png",
+      "/assets/projects/landings/kafe/3.png",
+      "/assets/projects/landings/kafe/4.png",
+      "/assets/projects/landings/kafe/5.png",
+      "/assets/projects/landings/kafe/6.png",
+      "/assets/projects/landings/kafe/7.png"
+    ],
+    "metrics": [
+      {
+        "label": "Страниц",
+        "value": "5"
+      },
+      {
+        "label": "Дней разработки",
+        "value": "14"
+      },
+      {
+        "label": "Участников программы лояльности",
+        "value": "8 400"
+      }
+    ]
+  },
+  {
+    "slug": "ardo",
+    "title": "АРДО Недвижимость",
+    "client": "АРДО Недвижимость",
+    "category": "Корп. Сайт",
+    "year": "2026",
+    "color": "#1B2C4E",
+    "brief": "Корпоративный сайт агентства элитной недвижимости Москвы",
+    "challenge": "Разработать сайт для агентства с 14-летней историей и базой в 2 400+ объектов. Аудитория — покупатели премиальной недвижимости: им важны доверие, экспертиза и удобный поиск. Старый сайт не отражал статус компании и проигрывал конкурентам в юзабилити.",
+    "solution": "Создали строгий Корпоративный Сайт в тёмно-синей гамме с золотыми акцентами. Умный фильтр объектов на главной, детальные карточки с планировками и ипотечным калькулятором, блок «О нас» с цифрами и командой. Доверие строится на каждом экране.",
+    "tags": [
+      "Веб-дизайн",
+      "Разработка",
+      "Недвижимость"
+    ],
+    "cover": "/assets/projects/corp/nedvijka/1.png",
+    "images": [
+      "/assets/projects/corp/nedvijka/1.png",
+      "/assets/projects/corp/nedvijka/2.png",
+      "/assets/projects/corp/nedvijka/3.png",
+      "/assets/projects/corp/nedvijka/4.png",
+      "/assets/projects/corp/nedvijka/5.png",
+      "/assets/projects/corp/nedvijka/6.png",
+      "/assets/projects/corp/nedvijka/7.png"
+    ],
+    "metrics": [
+      {
+        "label": "Объектов в каталоге",
+        "value": "2 400+"
+      },
+      {
+        "label": "Дней разработки",
+        "value": "21"
+      },
+      {
+        "label": "Страниц",
+        "value": "8"
+      }
+    ]
+  },
+  {
     "slug": "coach",
     "title": "Executive-коуч",
     "client": "Частный executive-коуч",
