@@ -512,29 +512,27 @@
 
 /* --- Case gallery (real photos) --- */
 .case-gallery {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-4);
+  columns: 2;
+  column-gap: 0;
+  border-radius: var(--radius-md);
+  overflow: hidden;
 }
 
 .case-gallery__img {
   width: 100%;
-  border-radius: var(--radius-md);
   display: block;
   height: auto;
+  break-inside: avoid;
+  cursor: zoom-in;
 }
 
 .case-gallery__img--hero {
-  grid-column: 1 / -1;
+  column-span: all;
 }
 
 @media (max-width: 640px) {
   .case-gallery {
-    grid-template-columns: 1fr;
-  }
-
-  .case-gallery__img--hero {
-    grid-column: 1;
+    columns: 1;
   }
 }
 
@@ -689,18 +687,67 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  max-width: calc(100vw - 160px);
-  max-height: calc(100vh - 80px);
+  width: calc(100vw - 160px);
+  height: calc(100vh - 80px);
+  overflow: hidden;
+  touch-action: none;
+  user-select: none;
 }
 
 .lightbox__img {
   display: block;
   max-width: 100%;
-  max-height: calc(100vh - 80px);
+  max-height: 100%;
   border-radius: var(--radius-md);
   object-fit: contain;
   box-shadow: 0 32px 80px rgba(0, 0, 0, 0.6);
   transition: opacity 0.15s ease;
+  transform-origin: center center;
+  will-change: transform;
+  cursor: zoom-in;
+  -webkit-user-drag: none;
+  backface-visibility: hidden;
+  image-rendering: auto;
+}
+
+.lightbox__img--zoomed {
+  cursor: grab;
+}
+
+.lightbox__img--dragging {
+  cursor: grabbing;
+  transition: none;
+}
+
+.lightbox__zoom {
+  position: absolute;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: 2;
+  display: flex;
+  gap: var(--space-2);
+}
+
+.lightbox__zoom-btn {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 255, 255, 0.7);
+  border-radius: var(--radius-full);
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.lightbox__zoom-btn:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.lightbox__zoom-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
 }
 
 .lightbox__close {
@@ -758,12 +805,23 @@
 
 @media (max-width: 640px) {
   .lightbox__stage {
-    max-width: calc(100vw - 80px);
+    width: calc(100vw - 80px);
   }
 
   .lightbox__btn {
     width: 40px;
     height: 40px;
     margin: 0 var(--space-2);
+  }
+
+  .lightbox__zoom {
+    bottom: var(--space-3);
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .lightbox__zoom-btn {
+    width: 40px;
+    height: 40px;
   }
 }
