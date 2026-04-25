@@ -389,6 +389,72 @@
   justify-content: center;
   text-align: center;
   padding-block: var(--space-32);
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.contact-hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: -2;
+  overflow: hidden;
+}
+
+.contact-hero__logo {
+  position: absolute;
+  right: -130px;
+  top: 60%;
+  transform: translateY(-50%);
+  width: 900px;
+  height: 900px;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.22;
+  user-select: none;
+}
+
+.contact-hero__logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  animation: float-soft 9s ease-in-out infinite;
+}
+
+@media (max-width: 1025px) {
+  .contact-hero__logo {
+    width: 300px;
+    height: 300px;
+    right: -40px;
+    opacity: 0.15;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact-hero__logo {
+    width: 260px;
+    height: 260px;
+    right: -40px;
+    bottom: -30px;
+    top: auto;
+    transform: none;
+    opacity: 0.15;
+  }
+
+  .contact-hero__bg .hero__blob--1 {
+    top: -220px;
+    left: -80px;
+    width: 320px;
+    height: 320px;
+  }
+
+  .contact-hero__bg .hero__blob--2 {
+    bottom: -220px;
+    right: -60px;
+    width: 260px;
+    height: 260px;
+  }
 }
 
 .contact-hero__title {

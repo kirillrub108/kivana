@@ -26,6 +26,10 @@
   padding-block: var(--space-32);
 }
 
+.section--no-pb {
+  padding-block-end: var(--space-8);
+}
+
 /* Grid system */
 .grid {
   display: grid;
@@ -41,7 +45,13 @@
 }
 
 .grid--4 {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 480px) {
+  .grid--4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 @media (min-width: 768px) {

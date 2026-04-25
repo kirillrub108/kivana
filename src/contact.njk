@@ -3,18 +3,43 @@ layout: layouts/page.njk
 pageTitle: "Контакты"
 metaDescription: "Свяжитесь с нами через Telegram или email. Ответим в течение нескольких часов."
 permalink: /contact/
+
 ---
 
 <section class="contact-hero">
+  <div class="contact-hero__bg" aria-hidden="true">
+    <span class="hero__blob hero__blob--1"></span>
+    <span class="hero__blob hero__blob--2"></span>
+  </div>
+  <div class="contact-hero__logo" aria-hidden="true">
+    <img
+      src="/assets/images/logos/3d_kivana.png"
+      alt=""
+    >
+  </div>
   <div class="container container--narrow">
     <h1 class="contact-hero__title reveal">Давайте работать вместе</h1>
-    <p class="contact-hero__desc reveal" style="--delay: 80ms">Напишите нам в Telegram — обычно отвечаем в течение пары часов в рабочее время. Расскажите о задаче, и мы предложим решение.</p>
-    <p class="oferta-note reveal" style="--delay: 140ms">Работаем по <a href="/oferta/">публичной оферте</a> — все условия прозрачны и зафиксированы.</p>
+    <p class="contact-hero__desc reveal" style="--delay: 80ms">
+      Напишите нам в Telegram — обычно отвечаем в течение пары часов в рабочее
+      время. Расскажите о задаче, и мы предложим решение.
+    </p>
+    <p class="oferta-note reveal" style="--delay: 140ms">
+      Работаем по <a href="/oferta/">публичной оферте</a> — все условия
+      прозрачны и зафиксированы.
+    </p>
     <div class="reveal" style="--delay: 160ms">
-      <a href="{{ site.telegram }}" class="btn btn--inverted btn--lg btn--full" target="_blank" rel="noopener" onclick="ym(107705556,'reachGoal','tg_click')">Написать в Telegram</a>
+      <a
+        href="{{ site.telegram }}"
+        class="btn btn--inverted btn--lg btn--full"
+        target="_blank"
+        rel="noopener"
+        onclick="ym(107705556, 'reachGoal', 'tg_click')"
+      >Написать в Telegram</a>
     </div>
     <div class="mt-8 reveal" style="--delay: 200ms">
-      <a href="mailto:{{ site.email }}" class="contact-hero__email">{{ site.email }}</a>
+      <a href="mailto:{{ site.email }}" class="contact-hero__email">{{
+        site.email
+      }}</a>
     </div>
   </div>
 </section>

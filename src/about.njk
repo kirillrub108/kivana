@@ -3,6 +3,7 @@ layout: layouts/page.njk
 pageTitle: "О нас"
 metaDescription: "Дизайн-студия полного цикла: от идеи до запуска. Брендинг, веб-дизайн, разработка. Фиксированные сроки и прозрачные цены."
 permalink: /about/
+
 ---
 
 {# Page hero #}
@@ -12,22 +13,50 @@ permalink: /about/
       <span class="dot dot--pulse"></span>
       О команде
     </div>
-    <h1 class="page-hero__title reveal" style="--delay: 60ms">Делаем проекты <span class="text-mark">сами</span> — от идеи до первых&nbsp;заявок</h1>
-    <p class="page-hero__desc reveal" style="--delay: 120ms">Дизайн, разработка, реклама и сопровождение — в одной маленькой команде. Без подрядчиков-передаточек, без посредников, без «не моя зона».</p>
+    <h1 class="page-hero__title reveal" style="--delay: 60ms">
+      Делаем проекты <span class="text-mark">сами</span> — от идеи до
+      первых&nbsp;заявок
+    </h1>
+    <p class="page-hero__desc reveal" style="--delay: 120ms">
+      Дизайн, разработка, реклама и сопровождение — в одной маленькой команде.
+      Без подрядчиков-передаточек, без посредников, без «не моя зона».
+    </p>
   </div>
 </section>
 
 {# Team #}
 <section class="section--sm">
   <div class="container">
-    <div class="grid grid--2">
+    <div class="section-header reveal">
+      <h2 class="section-header__title">Команда</h2>
+      <p class="section-header__desc">Два человека — полный цикл.</p>
+    </div>
+    <div class="member-grid">
       {% for member in site.team %}
-      <div class="team-card reveal" style="--delay: {{ loop.index0 * 100 }}ms">
-        <div class="team-card__avatar">{{ member.name | first }}</div>
-        <div class="team-card__name">{{ member.name }}</div>
-        <div class="team-card__role">{{ member.role }}</div>
-        <p class="team-card__bio">{{ member.bio }}</p>
-      </div>
+        <div
+          class="member-card reveal"
+          style="--delay: {{ loop.index0 * 100 }}ms"
+        >
+          <div class="member-card__top {% if loop.index0 == 0 %}member-card__top--design{% else %}member-card__top--dev{% endif %}">
+            <div class="member-card__avatar">{{ member.name | first }}</div>
+            <div class="member-card__meta">
+              <div class="member-card__name">{{ member.name }}</div>
+              <div class="member-card__role">{{ member.role }}</div>
+            </div>
+          </div>
+          <p class="member-card__bio">{{ member.bio }}</p>
+          <div class="member-card__skills">
+            {% if loop.index0 == 0 %}
+              <span class="skill-tag">Figma</span>
+              <span class="skill-tag">Брендинг</span>
+              <span class="skill-tag">UI/UX</span>
+            {% else %}
+              <span class="skill-tag">Frontend</span>
+              <span class="skill-tag">Backend</span>
+              <span class="skill-tag">Яндекс.Директ</span>
+            {% endif %}
+          </div>
+        </div>
       {% endfor %}
     </div>
   </div>
@@ -37,59 +66,115 @@ permalink: /about/
 <section class="section" style="background-color: var(--color-bg-subtle)">
   <div class="container">
     <div class="section-header reveal">
-      <h2 class="section-header__title">Почему мы</h2>
+      <h2 class="section-header__title">Что вы получаете</h2>
     </div>
     <div class="grid grid--4">
       <div class="advantage advantage--green reveal" style="--delay: 0ms">
         <div class="advantage__title">Полный цикл</div>
-        <p class="advantage__desc">Дизайн, разработка, реклама и сопровождение — в одной команде. Один контакт, одна ответственность.</p>
+        <p class="advantage__desc">
+          Дизайн, разработка, реклама и сопровождение — в одной команде. Один
+          контакт, одна ответственность.
+        </p>
       </div>
       <div class="advantage reveal" style="--delay: 80ms">
-        <div class="advantage__title">Поддержка после запуска</div>
-        <p class="advantage__desc">3 месяца бесплатных правок и абонемент на сопровождение. Сдаём — и остаёмся на связи.</p>
+        <div class="advantage__title">3 месяца поддержки</div>
+        <p class="advantage__desc">
+          Бесплатные правки и абонемент на сопровождение. Сдаём — и остаёмся на
+          связи.
+        </p>
       </div>
       <div class="advantage reveal" style="--delay: 160ms">
         <div class="advantage__title">Фиксированные сроки</div>
-        <p class="advantage__desc">Называем дату — сдаём в дату. Работаем по спринтам с еженедельными отчётами.</p>
+        <p class="advantage__desc">
+          Называем дату — сдаём в дату. Спринты с еженедельными отчётами.
+        </p>
       </div>
       <div class="advantage reveal" style="--delay: 240ms">
         <div class="advantage__title">Прозрачные цены</div>
-        <p class="advantage__desc">Фиксированная стоимость проекта и абонемента. Никаких скрытых доплат и размытых смет.</p>
+        <p class="advantage__desc">
+          Фиксированная стоимость. Никаких скрытых доплат и размытых смет.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
 {# Process #}
-<section class="section">
+<section class="section section--no-pb">
   <div class="container">
     <div class="section-header reveal">
-      <h2 class="section-header__title">Процесс работы</h2>
+      <h2 class="section-header__title">Как мы работаем</h2>
+      <p class="section-header__desc">
+        Шесть этапов от брифа до первых клиентов.
+      </p>
     </div>
-    <div class="process process--6 reveal" style="--delay: 100ms">
-      <div class="process__step">
-        <div class="process__number">01</div>
-        <div class="process__name">Бриф</div>
+    <div class="timeline">
+      <div class="timeline__item reveal">
+        <div class="timeline__num">01</div>
+        <div class="timeline__connector"></div>
+        <div class="timeline__content">
+          <div class="timeline__name">Бриф</div>
+          <div class="timeline__desc">
+            Изучаем задачу, аудиторию и конкурентов. Формируем ТЗ.
+          </div>
+        </div>
       </div>
-      <div class="process__step">
-        <div class="process__number">02</div>
-        <div class="process__name">Дизайн</div>
+      <div class="timeline__item reveal" style="--delay: 60ms">
+        <div class="timeline__num">02</div>
+        <div class="timeline__connector"></div>
+        <div class="timeline__content">
+          <div class="timeline__name">Дизайн</div>
+          <div class="timeline__desc">
+            Проектируем в Figma, согласуем итерациями — без бесконечных
+            переделок.
+          </div>
+        </div>
       </div>
-      <div class="process__step">
-        <div class="process__number">03</div>
-        <div class="process__name">Разработка</div>
+      <div class="timeline__item reveal" style="--delay: 120ms">
+        <div class="timeline__num">03</div>
+        <div class="timeline__connector"></div>
+        <div class="timeline__content">
+          <div class="timeline__name">Разработка</div>
+          <div class="timeline__desc">
+            Верстаем и тестируем на всех устройствах. Пишем чистый код.
+          </div>
+        </div>
       </div>
-      <div class="process__step">
-        <div class="process__number">04</div>
-        <div class="process__name">Деплой</div>
+      <div class="timeline__item reveal" style="--delay: 180ms">
+        <div class="timeline__num">04</div>
+        <div class="timeline__connector"></div>
+        <div class="timeline__content">
+          <div class="timeline__name">Деплой</div>
+          <div class="timeline__desc">
+            Публикуем, подключаем домен, настраиваем аналитику.
+          </div>
+        </div>
       </div>
-      <div class="process__step process__step--accent">
-        <div class="process__number">05</div>
-        <div class="process__name">Реклама</div>
+      <div
+        class="timeline__item timeline__item--accent reveal"
+        style="--delay: 240ms"
+      >
+        <div class="timeline__num">05</div>
+        <div class="timeline__connector"></div>
+        <div class="timeline__content">
+          <div class="timeline__name">Реклама</div>
+          <div class="timeline__desc">
+            Запускаем кампании в Яндекс.Директ и VK, ведём трафик.
+          </div>
+        </div>
       </div>
-      <div class="process__step process__step--accent">
-        <div class="process__number">06</div>
-        <div class="process__name">Сопровождение</div>
+      <div
+        class="timeline__item timeline__item--accent timeline__item--last reveal"
+        style="--delay: 300ms"
+      >
+        <div class="timeline__num">06</div>
+        <div class="timeline__connector"></div>
+        <div class="timeline__content">
+          <div class="timeline__name">Сопровождение</div>
+          <div class="timeline__desc">
+            3 месяца правок включены. Абонемент — по желанию.
+          </div>
+        </div>
       </div>
     </div>
   </div>
