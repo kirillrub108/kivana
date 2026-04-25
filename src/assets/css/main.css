@@ -77,7 +77,7 @@
   left: 0;
   right: 0;
   height: 2px;
-  background-color: var(--color-accent);
+  background: var(--gradient-kivana);
   border-radius: var(--radius-full);
 }
 
@@ -212,9 +212,10 @@
   height: calc(100svh - 64px);
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-end;
   position: relative;
-  padding-block: var(--space-16);
+  padding-top: var(--space-16);
+  padding-bottom: 0;
   overflow: hidden;
   box-sizing: border-box;
 }
@@ -224,6 +225,9 @@
   align-items: center;
   justify-content: space-between;
   gap: var(--space-8);
+  position: relative;
+  z-index: 1;
+  flex: 1 1 auto;
 }
 
 .hero__content {
@@ -236,9 +240,8 @@
 .hero__logo {
   flex: 0 0 auto;
   position: absolute;
-  right: -150px;
-  bottom: -350px;
-  top: 50%;
+  right: -400px;
+  top: 60%;
   transform: translateY(-50%);
 }
 
@@ -266,6 +269,13 @@
   letter-spacing: var(--tracking-tight);
   max-width: 900px;
   margin-bottom: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: 0.1em;
+}
+
+.hero__title>span {
+  display: inline-block;
 }
 
 .hero__subtitle {
@@ -278,40 +288,30 @@
 }
 
 .btn--hero {
-  background-color: var(--color-kivana-accent);
+  background: var(--color-kivana-accent);
   color: #fff;
+  font-weight: 600;
+  box-shadow: var(--shadow-glow-strong);
 }
 
 .btn--hero:hover {
-  background-color: var(--color-kivana-accent-hover);
-}
-
-.hero__scroll {
-  position: absolute;
-  bottom: var(--space-2);
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: var(--text-sm);
-  color: var(--color-text-tertiary);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.hero__scroll-arrow {
-  font-size: var(--text-xl);
+  background: var(--color-kivana-accent-ink);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 28px 70px -10px rgba(47, 158, 107, 0.7);
 }
 
 /* --- Section headers --- */
 .section-header {
   margin-bottom: var(--space-12);
+  max-width: 720px;
 }
 
 .section-header__title {
   font-size: clamp(1.75rem, 4vw, var(--text-4xl));
   font-weight: 600;
   margin-bottom: var(--space-4);
+  letter-spacing: var(--tracking-tight);
 }
 
 .section-header__desc {
@@ -345,6 +345,10 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--space-4);
+}
+
+.about-strip__stats .stat {
+  min-height: 130px;
 }
 
 /* --- Case hero (individual case page) --- */

@@ -38,9 +38,16 @@
   --color-text-secondary: #6b6b67;
   --color-text-tertiary: #a0a09c;
   --color-accent: #0f0f0e;
-  --color-kivana-accent: #22C55E;
-  --color-kivana-accent-hover: #051B0D;
+  --color-kivana-accent: #2F9E6B;
+  --color-kivana-accent-soft: #EAF5EE;
+  --color-kivana-accent-bright: #3FB37C;
+  --color-kivana-accent-deep: #1F7A50;
+  --color-kivana-accent-ink: #0B2418;
+  --color-kivana-accent-hover: #082017;
   --color-accent-hover: #2a2a28;
+  --gradient-kivana: linear-gradient(135deg, #3FB37C 0%, #2F9E6B 50%, #1F7A50 100%);
+  --gradient-kivana-soft: linear-gradient(135deg, #F4FAF6 0%, #E6F3EC 100%);
+  --gradient-kivana-deep: linear-gradient(140deg, #1F7A50 0%, #0B2418 100%);
 
   /* Typography */
   --font-sans: 'FixelText', system-ui, -apple-system, sans-serif;
@@ -92,7 +99,11 @@
   --transition-base: 250ms ease;
   --transition-slow: 400ms ease;
 
-  /* Shadows */
-  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
-  --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+  /* Shadows — refined, subtle, modern */
+  --shadow-sm: 0 1px 2px rgba(11, 36, 24, 0.04), 0 1px 3px rgba(11, 36, 24, 0.06);
+  --shadow-md: 0 4px 12px rgba(11, 36, 24, 0.06), 0 2px 4px rgba(11, 36, 24, 0.04);
+  --shadow-lg: 0 16px 32px -8px rgba(11, 36, 24, 0.12), 0 4px 8px rgba(11, 36, 24, 0.04);
+  --shadow-glow: 0 12px 28px -10px rgba(47, 158, 107, 0.28);
+  --shadow-glow-strong: 0 18px 40px -12px rgba(47, 158, 107, 0.38);
+  --ring-kivana: 0 0 0 1px rgba(47, 158, 107, 0.18);
 }
